@@ -196,7 +196,7 @@ CAMPOS_MALLA_TODOS = (
     # Nuevos de Malla Documental (Estructura 2) sin equivalente
     + ["software_creacion", "propietario", "fecha_modificacion", "fecha_creacion",
        "paginas_impares", "ancho_primera_pagina", "alto_primera_pagina",
-       "archivo_difusion"]
+       "archivo_difusion", "ciclo_vida"]
 )
 
 # Campos que YA existen en otras categorías de tu diccionario (L8 INVENTARIO TECNICO,
@@ -231,6 +231,8 @@ MAPEO_FUID_DIRECTO = [
     ("HIPERVINCULO", "link", "MALLA"),
     ("DESCRIPCION DE ARCHIVO", "descripcion", "56"),
     ("RUTA", "ubicacion", "56"),
+    ("archivo_difusion", "archivo_difusion", "MALLA"),
+    ("ciclo_vida", "ciclo_vida", "MALLA"),
 ]
 
 

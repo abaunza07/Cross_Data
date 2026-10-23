@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-cd /d "%~dp0"
+pushd "%~dp0"
 
 echo ============================================================
 echo  Carpeta actual: %cd%
@@ -31,15 +31,15 @@ REM ------------------------------------------------------------
 REM 2) Verificar que los archivos necesarios existen aqui
 REM ------------------------------------------------------------
 echo [2/4] Verificando archivos...
-if not exist "cruce_fuid_servidor.py" (
-    echo ERROR: no encuentro "cruce_fuid_servidor.py" en esta carpeta.
-    echo Asegurate de que compilar_exe.bat y cruce_fuid_servidor.py
+if not exist "cruce_fuid_v3.py" (
+    echo ERROR: no encuentro "cruce_fuid_v3.py" en esta carpeta.
+    echo Asegurate de que compilar_exe.bat y cruce_fuid_v3.py
     echo esten en la MISMA carpeta.
     echo.
     pause
     exit /b 1
 )
-echo   OK: cruce_fuid_servidor.py encontrado.
+echo   OK: cruce_fuid_v3.py encontrado.
 echo.
 
 REM ------------------------------------------------------------
@@ -63,8 +63,8 @@ REM ------------------------------------------------------------
 REM 4) Compilar usando "python -m PyInstaller" (mas confiable que
 REM    el comando "pyinstaller" suelto, que a veces no queda en PATH)
 REM ------------------------------------------------------------
-echo [4/4] Compilando cruce_fuid_servidor.exe ...
-python -m PyInstaller --onefile --console --name cruce_fuid_servidor --clean cruce_fuid_servidor.py
+echo [4/4] Compilando cruce_fuid_v3.exe ...
+python -m PyInstaller --onefile --console --name cruce_fuid_v3 --clean cruce_fuid_v3.py
 if %errorlevel% neq 0 (
     echo.
     echo ERROR: la compilacion fallo. Copia el mensaje de error de
@@ -76,9 +76,9 @@ if %errorlevel% neq 0 (
 
 echo.
 echo ============================================================
-if exist "dist\cruce_fuid_servidor.exe" (
+if exist "dist\cruce_fuid_v3.exe" (
     echo  LISTO. El ejecutable quedo en:
-    echo  %cd%\dist\cruce_fuid_servidor.exe
+    echo  %cd%\dist\cruce_fuid_v3.exe
 ) else (
     echo  ADVERTENCIA: el proceso termino sin error pero no encuentro
     echo  dist\cruce_fuid_servidor.exe. Revisa el mensaje de arriba.
