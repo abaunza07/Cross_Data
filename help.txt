@@ -1,0 +1,9 @@
+##Revertir prueba fallida
+git fetch origin
+git reset --hard origin/main
+git clean -fd
+
+##Subir prueba exitosa
+git add {nombre_del_archivo}
+git commit -m "Mensaje del commit"
+git push
