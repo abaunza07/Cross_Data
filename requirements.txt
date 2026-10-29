@@ -1,0 +1,10 @@
+# Procesamiento de archivos Excel
+openpyxl
+
+# Compilacion del procesador a ejecutable
+pyinstaller
+
+# Aplicacion de reportes
+streamlit
+pandas
+plotly
