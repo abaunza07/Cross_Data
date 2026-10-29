@@ -3,4 +3,4 @@
 *.xlsx
 /Cruces_FUID/build/
 /Cruces_FUID/dist/
-.spec
+*.spec
