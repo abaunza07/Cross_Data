@@ -3,8 +3,3 @@
 *.xlsx
 /Cruces_FUID/build/
 /Cruces_FUID/dist/
-# Archivos temporales de Python
-__pycache__/
-*.py[cod]
-
-tools/exiftool.exe
