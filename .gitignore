@@ -1,10 +1,8 @@
 .venv/
 *.csv
 *.xlsx
-
-Utilidades_de_Python_para_Datos.ipynb
-Utilidades_de_Python_para_Datos-checkpoint.ipynb
-
+/Cruces_FUID/build/
+/Cruces_FUID/dist/
 # Archivos temporales de Python
 __pycache__/
 *.py[cod]
