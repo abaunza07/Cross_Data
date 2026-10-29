@@ -8,3 +8,5 @@ Utilidades_de_Python_para_Datos-checkpoint.ipynb
 # Archivos temporales de Python
 __pycache__/
 *.py[cod]
+
+tools/exiftool.exe
