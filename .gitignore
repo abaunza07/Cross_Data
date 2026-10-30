@@ -4,3 +4,4 @@
 /Cruces_FUID/build/
 /Cruces_FUID/dist/
 *.spec
+/Graficar/__pycache__/
