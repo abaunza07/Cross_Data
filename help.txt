@@ -1,9 +1,53 @@
 ##Revertir prueba fallida
+Descarta los cambios locales y deja la rama igual que en GitHub.
 git fetch origin
-git reset --hard origin/main
+git reset --hard origin/(rama_actual)
 git clean -fd
+Ejemplo: git reset --hard origin/Dev2
+
+##Ver rama y cambios
+git branch
+git status
+git diff
+
+##Crear una rama nueva
+git fetch origin
+git checkout (rama_base)
+git pull origin (rama_base)
+git checkout -b (rama_nueva)
+Ejemplo: git checkout main
+Ejemplo: git checkout -b metadatos-pdf
+
+##Pasarse a una rama que ya existe
+git fetch origin
+git checkout (rama_actual)
+git pull origin (rama_actual)
+Ejemplo: git checkout Dev2
+
+##Traer otra rama a la rama en la que estoy
+git fetch origin
+git merge origin/(rama_base)
+Ejemplo: git merge origin/main
 
 ##Subir prueba exitosa
-git add {nombre_del_archivo}
-git commit -m "Mensaje del commit"
+git add (nombre_del_archivo)
+git commit -m "(mensaje del commit)"
 git push
+Ejemplo: git add cruce_fuid.py
+
+##Subir el commit con un usuario
+git add (nombre_del_archivo)
+git -c user.name="(nombre del usuario)" -c user.email="(correo)" commit -m "(mensaje del commit)"
+git push
+Ejemplo: git -c user.name="antuango2345" -c user.email="correo@dominio.com" commit -m "Ajusta metadatos del PDF"
+
+##Subir una rama nueva por primera vez
+git push -u origin (rama_nueva)
+Ejemplo: git push -u origin metadatos-pdf
+
+##Sacar un archivo del proximo commit
+El archivo sigue en el disco.
+git restore --staged (nombre_del_archivo)
+
+##Descartar los cambios de un solo archivo
+git restore (nombre_del_archivo)
